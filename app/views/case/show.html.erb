@@ -1,0 +1,46 @@
+<center> <h1 style="text-align: center;"> <b> Welcome to RailsBet! </b> </h1> </center>
+<script>
+buton.addEventListener("click", function(){
+	kasa.animation = "forwards !important";
+	kasa.webkitAnimation = "forwards !important";
+});
+</script>
+    <div id="box"></div>
+      <center>  <button id="buton">Start!</button> </center>
+        <div id="dd11">
+          <div id="cizgi">
+          </div>
+    <% x = 0 %>
+    <% values = @items.values %>
+    <% loop do %>
+    <%  @foto = values[rand(values.size)] %>
+    <%  @name = @items.key(@foto) %>
+    <%  break if x == 100 %>
+    <div id="box" class="relative">
+      <%  if x == 83 %>
+      <%  @winnername = @name %>
+      <%  @winnerfoto = @foto %>
+      <%  end %>
+        <div id="image">
+          <img src= "/assets/<%= @foto %>" alt="<%= @name %>" width="90" height="90" >
+        </div>
+        <p><%= @name%></p>
+    </div>
+    <% x+= 1 %>
+    <% end %>
+    </div>
+
+
+
+<div id="showwinner">
+  <p>Winner is</p>
+  <img src= "/assets/<%= @winnerfoto %>" alt="<%= @winnername %>">
+  <h1><b><%= @winnername %></b></h1>
+</div>
+
+<div id="poi">
+  <h3 style="text-align: center;"> <b> The government has a secret system. </b> </h3>
+  <a style="display:block;width:100%;background:lightgray;">
+    <center> <img  src="http://sm.ign.com/ign_tr/review/p/person-of-interest-the-devil-you-know-review/person-of-interest-the-devil-you-know-review_bkkm.jpg"/> </center>
+  </a>
+</div>

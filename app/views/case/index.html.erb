@@ -1,28 +1,24 @@
-<h1 style="text-align: center;"><b>Welcome to RailsBet!</b></h1>
-        <div id="dd11">
-          <div id="cizgi">
-          </div>
-    <% x = 0 %>
-    <% values = @items.values %>
-    <% loop do %>
-    <%  @foto = values[rand(values.size)] %>
-    <%  @name = @items.key(@foto) %>
-    <%  break if x == 93 %>
-    <div id="box" class="relative">
-      <%  if x == 83 %>
-      <%  @winnername = @name %>
-      <%  @winnerfoto = @foto %>
-      <%  end %>
-        <div id="image">
-          <img src= "/assets/<%= @foto %>" alt="<%= @name %>" width="90" height="90" >
-        </div>
-        <p><%= @name%></p>
-</div>
-    <% x+= 1 %>
-    <% end %>
-    </div>
-<div id="showwinner">
-  <p>Winner is</p>
-  <img src= "/assets/<%= @winnerfoto %>" alt="<%= @winnername %>">
-  <h1><b><%= @winnername %></b></h1>
-</div>
+<center> <h1 style="text-align: center;"> <b> Welcome to RailsBet! </b> </h1> </center>
+<br>
+<center> <b> <%= link_to "Login",  new_user_session_path, class: "navbar-brand" %> </b> </center>
+<br>
+<center> <b> <%= link_to "Register",  new_user_registration_path, class: "navbar-brand" %> </b> </center>
+<br>
+<center> <b> <%= link_to "Log out",  destroy_user_session_path, :method => :delete, class: "navbar-brand" %> </b> </center>
+<br>
+<center> <% @cases.each do |kasa2| %>
+    <tr>
+      <td><%= kasa2.name %></td>
+    <b>  <td><%= link_to 'Show', show_path(id:1) %></td> </b>
+    </tr>
+    <center><div id="casepic">
+      <a style="display:block;width:100%;background:lightgray;">
+        <img src="https://i.hizliresim.com/okG07k.png"/>
+      </a>
+    </div> </center>
+  <% end %>
+</center>
+
+
+
+<center> <b> <p> KODBILEN KALP TOBYMEISTER </p> </b> </center>

@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20170826225736) do
     t.text     "blue"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "name"
   end
 
   create_table "users", force: :cascade do |t|

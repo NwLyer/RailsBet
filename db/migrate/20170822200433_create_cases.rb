@@ -3,6 +3,8 @@ class CreateCases < ActiveRecord::Migration[5.0]
     create_table :cases do |t|
       t.text :blue
       t.timestamps
+      t.text :name
+
     end
   end
 end

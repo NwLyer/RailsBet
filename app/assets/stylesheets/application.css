@@ -13,33 +13,51 @@
  *= require_tree .
  *= require_self
  */
- @keyframes kasa {
+ #buton{
+     margin-top: 0px;
+     margin-bottom: 0px;
+     margin-left: 0px;
+     margin-right: 0px;
+ }
+
+@keyframes kasa {
   0%   {right:0px;}
   100% {right:7950px;}
 }
+@-webkit-keyframes kasa {
+  0%   {right:0px;}
+  100% {right:7950px;}
+  }
 @keyframes winner {
- 0%   {opacity: 0;}
+ 0%    {opacity: 0;}
  90%   {opacity: 0;}
- 100% {opacity: 1;}
+ 100%  {opacity: 1;}
 }
 body{
 background: lightgray;
-margin: 0px;
-padding: 0px;
+margin: 10px;
+padding: 10px;
+}
+.animate{
+animation-name: kasa;
+  -webkit-animation-fill-mode: forwards !important;
+  animation-duration: 3s;
+  display: inline-block;
+  position: relative;
 }
 #showwinner{
   animation-name: winner;
   -webkit-animation-fill-mode: forwards !important;
   animation-duration: 3.3s;
-  margin: 50px 200px 50px 200px;
+  margin: 50px 100px 50px 100px;
   background: white;
   text-align: center;
 }
 #cizgi{
 z-index: 2;
-background: orange;
-height: 100px;
-width: 10px;
+background: black;
+height: 95px;
+width: 5px;
 position: absolute;
 margin-left: auto;
 margin-right: auto;
@@ -59,13 +77,25 @@ right: 0;
   height: 90px;
 }
 #box{
-  animation-name: kasa;
-  -webkit-animation-fill-mode: forwards !important;
-  animation-duration: 3s;
   display: inline-block;
   position: relative;
   width: 100px;
   height: 100px;
     white-space: nowrap;
     text-align: center;
+}
+#poi{
+  border: 1px solid white;
+  margin: 50px 300px 50px 300px;
+  background: lightgray;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#casepic{
+  border: 0px solid lightgray;
+  margin: 20px 300px 20px 300px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
